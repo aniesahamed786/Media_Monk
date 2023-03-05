@@ -1,0 +1,73 @@
+
+<body [style.background-position-x]="positionx" *ngIf="dataloaded | async as true; else loading">
+    <main>
+        <div style="color:white; margin:0px; padding:10px; cursor: pointer; border:none" >
+           <button (click)="leftscroll($event)">
+            <i style="font-size:60px" class="fa">&#xf104;</i>
+           </button> 
+        </div>
+        <div style="border:2px solid none; height:100%; width:95vw; color:white">
+        <router-outlet></router-outlet>
+        </div>
+        <div style="color:white; margin:0px; padding:10px; cursor: pointer;" >
+            <button (click)="rightscroll($event)" *ngIf="btn">
+                <i style="font-size:60px" class="fa">&#xf105;</i>
+            </button>
+            
+        </div>
+    </main>
+    <footer>
+    
+    <div style="display:flex; justify-content:center; align-items:center; flex-direction:row; color:white;">
+        
+<div class="grid-container">
+    <div class="grid-item" (click)="start()" >
+        <span routerLink="/main/F" routerLinkActive="active" style="padding:3px;"  >&nbsp;</span>
+    </div>
+    <div class="grid-item" (click)="navigate('1')">
+        <span routerLink="/main/c1" routerLinkActive="active" style="padding:3px;"  >1</span>
+    </div>
+    <div class="grid-item" (click)="navigate('2')">
+        <span routerLink="/main/c2" routerLinkActive="active" style="padding:3px;" >2</span>
+    </div>  
+    <div class="grid-item" (click)="navigate('3')">
+        <span routerLink="/main/c3" routerLinkActive="active" style="padding:3px;" >3</span>
+    </div>
+    <div class="grid-item" (click)="navigate('4')">
+        <span routerLink="/main/c4" routerLinkActive="active" style="padding:3px;" >4</span>
+    </div>
+    <div class="grid-item" (click)="navigate('5')">
+        <span routerLink="/main/c5" routerLinkActive="active" style="padding:3px;" >5</span>
+    </div>  
+    <div class="grid-item" (click)="navigate('6')">
+        <span routerLink="/main/c6" routerLinkActive="active" style="padding:3px;" >6</span>
+    </div>
+    <div class="grid-item" (click)="navigate('7')">
+        <span routerLink="/main/c7" routerLinkActive="active" style="padding:3px;" >7</span>
+    </div>
+    <div class="grid-item" (click)="navigate('8')">
+        <span routerLink="/main/c8" routerLinkActive="active" style="padding:3px;" >8</span>
+    </div>  
+    <div class="grid-item" (click)="end()">
+        <span routerLink="/main/L" routerLinkActive="active" style="padding:3px;"  >&nbsp;</span>
+    </div>  
+  </div>
+  &nbsp;  &nbsp; 
+  <div *ngIf="content">
+    <span style="font-size:0.8vw">step {{pathtext}} out of 8 on the path to the digital enlightenment</span>
+  </div>
+    </div>
+    <div>
+        <h3 style="color:white; margin:0px; padding:10px; font-size: 2vw;">MEDIA MONKS</h3>
+    </div>
+    </footer>
+  </body>
+
+
+  <ng-template #loading>
+<div class="loading-template">
+    <img class="monk" src="../../../../assets/monk.png">
+    <!-- <svg src="../../../../assets/logo.svg" style="color:white;"></svg> -->
+<p style="color:white;">Patience!, <span class="load-text"></span></p>
+</div>
+  </ng-template>

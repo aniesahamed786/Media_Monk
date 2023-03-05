@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+  }
+  body{
+    // background: url('../../../../assets/background.jpg') no-repeat scroll;
+    padding: 0 !important;
+    margin: 0px !important;
+    font-family: 'Open Sans', sans-serif;
+    transition: 1s;
+    height:100vh;
+    width:auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    // border:2px solid red;
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    overflow-x: auto;
+    scrollbar-width: none !important;
+    background-image:url('../../../../assets/background.jpg');
+    background-color: black;
+    background-repeat:  no-repeat;
+    // background-attachment:center/cover;
+    background-position: scroll;
+    scroll-behavior: smooth;
+
+    // background-position-x: 100%;
+    background-size: 600% 100%;
+   
+
+    }
+main{
+    height:80%; width:100%; display:flex; justify-content:space-between; flex-direction: row; align-items:center; padding:0px; border:2px solid none; position:relative;
+}
+footer{
+    height:20%; width:100%;display:flex; justify-content:space-between; flex-direction:row; align-items:center; padding:15px; border:2px solid none; position:relative;flex-wrap: wrap;
+}
+ng-template{
+    display:flex; justify-content:center; align-items:center; height:100vh;  width:100% ; background-color: black;
+}
+.banner-card{
+    height:auto;
+    width:100%;
+    // position: relative;
+}
+button{
+    background-color: transparent;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+  .bg{
+        height:100vh;
+        width:auto;
+        background:no-repeat center/cover;
+        // overflow-x: scroll;
+        scrollbar-width: none !important;
+        
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto  auto auto auto auto auto auto auto;
+        background-color: none;
+        padding: 1px;
+      }
+      .grid-item {
+        background-color: none;
+        color: white;
+        border: 2px dotted rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        margin:0px;
+        font-size: small;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .active{
+        background-color: white;
+
+    }
+    
+    .loading-template{
+        display:flex;
+         justify-content:center; 
+         align-items:center;
+         flex-direction: column;
+         row-gap: 20px;
+        height:100vh;
+        width:100%;
+        background-color: black;
+        //  border:2px solid red;
+
+
+    }
+    .monk{
+        animation: mymove 3s alternate infinite;
+    }
+
+    @keyframes mymove {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(20px);
+        }
+      }
+
+
+      .load-text::before {
+        content: "";
+        animation: animate infinite 5s;
+        padding-left: 10px;
+    }
+
+    @keyframes animate {
+
+        0% {
+            content: "";
+        }
+
+        50% {
+            content: "";
+        }
+
+        75% {
+            content: "Young Padawan";
+        }
+        100% {
+            content: "Young Padawan";
+        }
+    }
